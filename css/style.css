@@ -1,15 +1,50 @@
-img {
-    width: 400px;
-    border-radius: 20px;
+body {
+    background-image: url("https://pbs.twimg.com/media/ET0TVJBUwAA9mjH.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
 h1 {
     font-family: 'Courier New', Courier, monospace;
-    margin: 100px 100px auto 100px;
+    margin: 0;
 }
 
-p {
-    background-color: aqua;
-    width: 175px;
+.title {
+    text-align: center;
+}
+main {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+    max-height: 400px;
+
+}
+.card {
+    display: grid;
+    border: 4px 4px black solid;
+    border-radius: 10px;
+    background-color: aliceblue;
+    width: 550px;
+    max-height: auto;
+    place-items: center;
+    box-shadow: 4px 4px 4px;
+    cursor: pointer;
+
+
+}
+.homer {
+display: grid;
+position: relative;
+top: 100%;
+transition: all .75s ease-in;
+height: 50%;
+place-items: center;
+
+}
+.card:active ~ .homer{
+    display: grid;
+    top: 0;
+    place-items: middle;
+    
+}
+.maincard {
+     overflow: hidden;   
 }
